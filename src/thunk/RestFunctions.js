@@ -5,7 +5,7 @@ const getDataRest = () => {
 
         return axios.get('http://localhost:3000/posts')
             .then(
-                user => dispatch({ type: 'GET_DATA_SUCCESS', user }),
+                posts => dispatch({ type: 'GET_DATA_SUCCESS', posts: posts}),
                 err => dispatch({ type: 'GET_DATA_FAILURE', err })
             );
     };
